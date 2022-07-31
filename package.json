@@ -6,15 +6,19 @@
   "types": "dist/esm/index.d.ts",
   "license": "MIT",
   "dependencies": {
+    "@jest/types": "^28.1.3",
+    "@types/jest": "^28.1.6",
     "@types/node": "^18.0.4",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "axios": "^0.27.2",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
+    "jest": "^28.1.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
+    "ts-jest": "^28.0.7",
     "ts-node": "^10.9.0",
     "typedoc": "^0.23.7",
     "typescript": "^4.7.4"
@@ -23,7 +27,8 @@
     "prebuild": "rimraf dist",
     "build": "run-p build:*",
     "build:common": "tsc",
-    "build:esm": "tsc -p tsconfig.esm.json"
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "main": "dist/index.js"
   },
   "files": [
     "dist"

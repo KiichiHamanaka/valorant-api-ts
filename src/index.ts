@@ -12,7 +12,7 @@ type ValorantApiOptions = {
 };
 
 export default class ValorantApi {
-  private readonly accessToken: string | undefined
+  private accessToken: string | undefined
   private readonly clientId: string | undefined
   private readonly clientSecret: string | undefined
   private readonly region: string | undefined
@@ -44,6 +44,9 @@ export default class ValorantApi {
   }
   getAuthorizationUrl(callbackUrl:string): string{
     return `https://auth.riotgames.com/authorize?redirect_uri=${callbackUrl}&client_id=${this.clientId}&response_type=code&scope=openid`
+  }
+  setAccessToken(accessToken:string) {
+    this.accessToken = accessToken
   }
 }
 

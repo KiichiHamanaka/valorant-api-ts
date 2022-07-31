@@ -26,16 +26,16 @@ export default class Account {
         const url = `https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${gameName}/${tagLine}`
         return await axios.get(url, { headers: { "X-Riot-Token": `Bearer ${this.accessToken}` } })
     }
-    /**
-     * プレイヤー名からアカウント情報を返す関数
-     * @param game ゲーム名
-     * @param puuid ユニークID
-     */
-    //TODO:ActiveShardDTOを作る
-    async getActiveShards(game: string, puuid: string): Promise<ActiveShardDto> {
-        const url = `https://asia.api.riotgames.com/riot/account/v1/active-shards/by-game/${game}/by-puuid/${puuid}`
-        return await axios.get(url, { headers: { "X-Riot-Token": `Bearer ${this.accessToken}` } })
-    }
+    // /**
+    //  * プレイヤー名からアカウント情報を返す関数
+    //  * @param game ゲーム名
+    //  * @param puuid ユニークID
+    //  */
+    // //TODO:ActiveShardDTOを作る
+    // async getActiveShards(game: string, puuid: string): Promise<ActiveShardDto> {
+    //     const url = `https://asia.api.riotgames.com/riot/account/v1/active-shards/by-game/${game}/by-puuid/${puuid}`
+    //     return await axios.get(url, { headers: { "X-Riot-Token": `Bearer ${this.accessToken}` } })
+    // }
     /**
      * トークンからアカウント情報を返す関数
      */
